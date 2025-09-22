@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Page - Find the Hidden Treasures</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(0,0,0,0.3);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        .ascii-art {
+            font-family: monospace;
+            white-space: pre;
+            text-align: center;
+            color: #00ff00;
+            font-size: 12px;
+            margin: 20px 0;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .flower-display {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .hidden-content {
+            display: none;
+        }
+        .button {
+            background: #007acc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .button:hover {
+            background: #005a9e;
+        }
+        .code-block {
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .flag-hint {
+            color: #ffeb3b;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚩 The Secret Page 🚩</h1>
+        
+        <div class="ascii-art">
+    ______ _               _    _             _   
+   |  ____| |             | |  | |           | |  
+   | |__  | | __ _  __ _  | |__| |_   _ _ __ | |_ 
+   |  __| | |/ _` |/ _` | |  __  | | | | '_ \| __|
+   | |    | | (_| | (_| | | |  | | |_| | | | | |_ 
+   |_|    |_|\__,_|\__, | |_|  |_|\__,_|_| |_|\__|
+                    __/ |                        
+                   |___/                         
+        </div>
+
+        <div class="section">
+            <h2>🌸 Flower Garden 🌸</h2>
+            <div class="flower-display">
+                🌸 🌺 🌻 🌷 🌹 🌼 🌻 🌺 🌸
+            </div>
+            <p>Welcome to our beautiful flower garden! Each flower has its own story to tell.</p>
+            <p class="flag-hint">💡 Hint: Some flowers bloom in unexpected places... like API responses!</p>
+            
+            <!-- Flag2 hint: TCQ2025{F!ow3r#92@tY8&Vk} hidden in API headers -->
+            <!-- Check /api/flower endpoint and look at response headers -->
+            
+            <div class="code-block">
+                <strong>Flower API Status:</strong><br>
+                Status: Active 🟢<br>
+                Endpoint: /api/flower<br>
+                Method: GET<br>
+                <span class="flag-hint">Special headers may contain encoded treasures...</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🏃‍♂️ Speed Challenge</h2>
+            <p>Think you're fast enough? Sometimes timing is everything...</p>
+            <p class="flag-hint">💡 Hint: Try hitting the same endpoint multiple times quickly!</p>
+            
+            <a href="/race" class="button">Test Your Speed</a>
+            
+            <div class="code-block">
+                Race Conditions:<br>
+                - Endpoint: /race<br>
+                - Challenge: Multiple rapid requests<br>
+                - <span class="flag-hint">Window of opportunity exists between requests 3-5</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💻 System Explorer</h2>
+            <p>Explore the system safely. What secrets might it hold?</p>
+            <p class="flag-hint">💡 Hint: Try common system commands as parameters!</p>
+            
+            <a href="/system" class="button">Explore System</a>
+            <a href="/system?cmd=ls" class="button">List Files</a>
+            <a href="/system?cmd=whoami" class="button">Who Am I?</a>
+            
+            <div class="code-block">
+                Available Commands:<br>
+                - ls (list files)<br>
+                - whoami (current user)<br>
+                - <span class="flag-hint">cat /etc/flag.txt (try this one!)</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔍 Security Scanner</h2>
+            <p>Advanced security scanning capabilities. Proper identification required.</p>
+            <p class="flag-hint">💡 Hint: Professional scanners have specific identifiers!</p>
+            
+            <a href="/vulnerability" class="button">Run Security Scan</a>
+            
+            <div class="code-block">
+                Scanner Requirements:<br>
+                - Proper User-Agent header<br>
+                - Professional security tools<br>
+                - <span class="flag-hint">Try: CTF-Scanner-2025</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔐 Administrative Access</h2>
+            <p>Secure login required. Only authorized personnel.</p>
+            <p class="flag-hint">💡 Hint: Sometimes the simplest passwords are the weakest...</p>
+            
+            <a href="/login" class="button">Admin Login</a>
+            
+            <div class="hidden-content">
+                <!-- Hidden credentials hint -->
+                <!-- Default credentials: admin / password123 -->
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 Quick Reference</h2>
+            <div class="code-block">
+                Flag Format: TCQ2025{...}<br>
+                Total Flags: 5<br>
+                Difficulty: Mixed<br>
+                <br>
+                <strong>Hunting Tips:</strong><br>
+                1. Check source code and comments<br>
+                2. Examine HTTP headers carefully<br>
+                3. Try timing-based attacks<br>
+                4. Test common vulnerabilities<br>
+                5. Use appropriate tools and headers<br>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript hint for advanced users
+        console.log("🔍 Console Message: Check all endpoints systematically!");
+        console.log("💡 Tip: Some challenges require specific tools or techniques");
+        console.log("🌸 Flower API: Look beyond the JSON response");
+        console.log("🏃 Race: Speed matters, but timing is crucial");
+        console.log("💻 System: Think like a penetration tester");
+        console.log("🔍 Scanner: Professional tools have signatures");
+        console.log("🔐 Login: Sometimes security is just an illusion");
+    </script>
+</body>
+</html>
