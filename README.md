@@ -39,9 +39,21 @@ This CTF demonstrates common web application vulnerabilities and security testin
 - `/vulnerability` - Security scanner simulation
 - `/robots.txt` - Reconnaissance hints
 
-## 📖 Complete Walkthrough
+## 📖 Complete Walkthroughs
 
-For detailed step-by-step solutions, see [WALKTHROUGH.md](WALKTHROUGH.md)
+### Available Guides:
+- **[WALKTHROUGH.md](WALKTHROUGH.md)** - Complete English walkthrough with technical details
+- **[DETAILED_WALKTHROUGH_HINDI.md](DETAILED_WALKTHROUGH_HINDI.md)** - विस्तृत हिंदी गाइड (Detailed Hindi/Hinglish step-by-step guide)
+- **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** - Quick commands cheat sheet
+
+### Automated Flag Extraction:
+```bash
+# Run the automated script to get all flags
+./get_all_flags.sh
+
+# Or specify custom server URL
+./get_all_flags.sh http://localhost:5000
+```
 
 ## 🎯 Learning Objectives
 
