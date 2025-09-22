@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - ACCESS GRANTED</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0d1117;
+            color: #00ff00;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .dashboard {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            background: rgba(0, 255, 0, 0.05);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #00ff00; }
+            to { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00; }
+        }
+        .flag-container {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border: 1px solid #00ff00;
+            text-align: center;
+        }
+        .flag {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffff00;
+            background: #333;
+            padding: 15px;
+            border-radius: 5px;
+            word-break: break-all;
+            letter-spacing: 1px;
+        }
+        .success-message {
+            color: #00ff00;
+            background: rgba(0, 255, 0, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #00ff00;
+        }
+        .terminal {
+            background: #000;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            white-space: pre-wrap;
+        }
+        .logout-btn {
+            background: #ff4444;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .home-btn {
+            background: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>🎉 ACCESS GRANTED 🎉</h1>
+            <h2>SECURITY COMPROMISED</h2>
+        </div>
+        
+        <div class="success-message">
+            <strong>✅ SUCCESSFUL AUTHENTICATION</strong><br>
+            Welcome, Administrator! You have successfully bypassed the security system.
+        </div>
+        
+        <div class="flag-container">
+            <h3>🚩 FLAG CAPTURED! 🚩</h3>
+            <div class="flag">{{ flag }}</div>
+            <p><strong>Flag 1 of 5 - Security Breach</strong></p>
+            <p>Vulnerability: Weak default credentials</p>
+        </div>
+        
+        <div class="terminal">SYSTEM LOG:
+[INFO] Authentication successful for user: admin
+[WARN] Default password detected - Security risk identified
+[ALERT] Flag dispensed - Challenge 1 completed
+[INFO] 4 more flags remain hidden in the system
+[INFO] Continue your penetration testing...</div>
+        
+        <div class="success-message">
+            <h4>🔓 What you learned:</h4>
+            <ul>
+                <li>Default credentials (admin/password123) were not changed</li>
+                <li>Simple brute force or educated guessing can compromise systems</li>
+                <li>Always change default passwords in production systems</li>
+                <li>Implement proper password policies and complexity requirements</li>
+            </ul>
+        </div>
+        
+        <div class="success-message">
+            <h4>🎯 Next Steps:</h4>
+            <p>You've found 1 of 5 flags! Continue exploring:</p>
+            <ul>
+                <li>🌸 Check API endpoints and response headers</li>
+                <li>🏃 Test timing-based vulnerabilities</li>
+                <li>💻 Explore system command injection possibilities</li>
+                <li>🔍 Use professional security scanning tools</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="/" class="home-btn">Continue Hunting</a>
+            <a href="/page" class="home-btn">Challenge Page</a>
+        </div>
+    </div>
+</body>
+</html>

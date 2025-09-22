@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenge 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            color: #333;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .challenge-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .challenge-list li {
+            background: #e8f4f8;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 4px solid #007acc;
+            border-radius: 5px;
+        }
+        .challenge-list a {
+            color: #007acc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .challenge-list a:hover {
+            text-decoration: underline;
+        }
+        .hint {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚩 CTF Challenge 2025 🚩</h1>
+            <p>Welcome to the Capture The Flag competition!</p>
+        </div>
+        
+        <div class="hint">
+            <strong>🔍 Hunt Instructions:</strong>
+            <p>There are 5 flags hidden throughout this application. Each flag follows the format: <code>TCQ2025{...}</code></p>
+            <p>Use different techniques like source code analysis, API testing, security scanning, and more!</p>
+        </div>
+
+        <h2>Available Endpoints:</h2>
+        <ul class="challenge-list">
+            <li>
+                <a href="/page">📄 /page</a> - Main challenge page
+            </li>
+            <li>
+                <a href="/login">🔐 /login</a> - Authentication system
+            </li>
+            <li>
+                <a href="/api/flower">🌸 /api/flower</a> - Flower API endpoint
+            </li>
+            <li>
+                <a href="/race">🏃 /race</a> - Performance testing endpoint
+            </li>
+            <li>
+                <a href="/system">💻 /system</a> - System information
+            </li>
+            <li>
+                <a href="/vulnerability">🔍 /vulnerability</a> - Security scanner
+            </li>
+            <li>
+                <a href="/robots.txt">🤖 /robots.txt</a> - Robots file
+            </li>
+        </ul>
+
+        <div class="hint">
+            <strong>💡 General Hints:</strong>
+            <ul>
+                <li>Check response headers and hidden content</li>
+                <li>Try different HTTP methods and parameters</li>
+                <li>Look for timing-based challenges</li>
+                <li>Consider common web vulnerabilities</li>
+                <li>Use appropriate tools and User-Agents</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hidden comment for flag hunters: Check other pages for more clues! -->
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .error-container {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 0 0 20px rgba(255,255,255,0.5);
+        }
+        .error-message {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .hint-box {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .home-btn {
+            background: #007acc;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        .home-btn:hover {
+            background: #005a9e;
+            transform: scale(1.05);
+        }
+        .ascii-sad {
+            font-family: monospace;
+            font-size: 14px;
+            margin: 20px 0;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <p class="error-message">Oops! Page Not Found</p>
+        
+        <div class="ascii-sad">
+    ┌─┐
+    ├─┤  ○
+    └─┘ /|\
+        / \
+     (  sad  )
+        </div>
+        
+        <div class="hint-box">
+            <h3>🕵️ CTF Hunter Tip</h3>
+            <p>Lost? Don't worry! In CTF competitions, even 404 pages can contain valuable information.</p>
+            <p><strong>💡 Remember to check:</strong></p>
+            <ul style="text-align: left;">
+                <li>🤖 /robots.txt for disallowed paths</li>
+                <li>📁 Directory enumeration</li>
+                <li>🔍 Hidden endpoints and parameters</li>
+                <li>📄 Source code comments</li>
+                <li>🌐 HTTP headers and responses</li>
+            </ul>
+        </div>
+        
+        <div class="hint-box">
+            <h4>🚩 Flag Hunt Status</h4>
+            <p>Keep exploring! There are still <strong>5 flags</strong> hidden throughout the application:</p>
+            <p><em>"The journey of discovery is more important than the destination."</em></p>
+        </div>
+        
+        <a href="/" class="home-btn">🏠 Go Home</a>
+        <a href="/page" class="home-btn">🎯 Main Challenge</a>
+        <a href="/robots.txt" class="home-btn">🤖 Check Robots</a>
+    </div>
+</body>
+</html>
