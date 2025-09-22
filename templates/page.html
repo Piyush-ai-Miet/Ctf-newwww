@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Page - CTF Challenge</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            color: #00ff00;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #ff6b6b;
+        }
+        h1 {
+            text-align: center;
+            color: #ffeb3b;
+            text-shadow: 0 0 10px #ffeb3b;
+        }
+        .flower-garden {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .flower {
+            font-size: 2em;
+            margin: 0 10px;
+            display: inline-block;
+            animation: bloom 2s infinite alternate;
+        }
+        @keyframes bloom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
+        .encoded-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #ff6b6b;
+        }
+        .nav-links {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .nav-links a {
+            color: #00ff00;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 16px;
+            border: 1px solid #00ff00;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+        .nav-links a:hover {
+            background: #00ff00;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌸 The Flower Garden Page 🌸</h1>
+        
+        <div class="flower-garden">
+            <span class="flower">🌸</span>
+            <span class="flower">🌺</span>
+            <span class="flower">🌻</span>
+            <span class="flower">🌷</span>
+            <span class="flower">🌹</span>
+            <span class="flower">🌼</span>
+        </div>
+
+        <div class="encoded-section">
+            <h3>🔍 Flag 2 Challenge: Flower Power</h3>
+            <p>The beauty of flowers lies in their hidden secrets. Can you decode the mystery?</p>
+            
+            <p><strong>Encoded Data:</strong></p>
+            <code style="background: #222; padding: 10px; display: block; border-radius: 3px; color: #ffeb3b; word-break: break-all;">
+                {{ encoded_data }}
+            </code>
+            
+            <p style="color: #ff6b6b; margin-top: 15px;">
+                <em>Hint: Sometimes the most beautiful things are encoded in the simplest ways...</em>
+            </p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 5px;">
+            <h3>🎯 More Challenges Await</h3>
+            <p>You've found the flower garden, but there are more secrets hidden in this cyber landscape:</p>
+            <ul>
+                <li>Some paths are only accessible with perfect timing</li>
+                <li>Administrative areas require special access</li>
+                <li>Zero-day discoveries need the right parameters</li>
+            </ul>
+        </div>
+
+        <div class="nav-links">
+            <a href="/">🏠 Home</a>
+            <a href="/hint">💡 Hints</a>
+            <a href="/robots.txt">🤖 Robots</a>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; color: #888;">
+            <p>Keep exploring, cyber warrior! 🚀</p>
+        </div>
+    </div>
+
+    <!-- Hidden comment for additional hint: The encoded data above is base64. Decode it to find Flag 2! -->
+</body>
+</html>

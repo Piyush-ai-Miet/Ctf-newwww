@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Cyber Quest 2025 - CTF Challenge</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #00ff00;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #00ff00;
+        }
+        h1 {
+            text-align: center;
+            color: #ff6b6b;
+            text-shadow: 0 0 10px #ff6b6b;
+        }
+        .flag-challenge {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .flag-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: #222;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            border-radius: 3px;
+        }
+        .submit-btn {
+            background: #ff6b6b;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background: #ff5252;
+        }
+        .hint {
+            color: #ffeb3b;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚩 Indian Cyber Quest 2025 - CTF Challenge 🚩</h1>
+        
+        <div class="flag-challenge">
+            <h2>Welcome Cyber Warriors!</h2>
+            <p>This is a multi-stage CTF challenge. Find all 5 flags to complete the quest!</p>
+            
+            <h3>🔐 Flag 1: Security Break Challenge</h3>
+            <p>Can you break through our security? Try to login with the right credentials.</p>
+            
+            <form id="loginForm">
+                <input type="password" id="password" class="flag-input" placeholder="Enter password..." required>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            
+            <div id="result"></div>
+            <div class="hint">Hint: Sometimes the simplest passwords are the weakest...</div>
+        </div>
+
+        <div class="flag-challenge">
+            <h3>🌸 Looking for more challenges?</h3>
+            <p>Explore different paths:</p>
+            <ul>
+                <li><a href="/page" style="color: #00ff00;">Visit the special page</a></li>
+                <li><a href="/hint" style="color: #ffeb3b;">Need hints?</a></li>
+                <li>Check the page source for hidden secrets</li>
+                <li>Don't forget to check robots.txt</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>Indian Cyber Quest 2025 | Designed by Piyush Dhariwal</p>
+            <!-- Flag1 Hidden Comment: Look for weak passwords like admin123 -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'password=' + encodeURIComponent(password)
+            })
+            .then(response => response.json())
+            .then(data => {
+                const resultDiv = document.getElementById('result');
+                if (data.success) {
+                    resultDiv.innerHTML = `<div style="color: #00ff00; margin-top: 10px;">
+                        <strong>🎉 ${data.message}</strong><br>
+                        <strong>Flag 1: ${data.flag}</strong>
+                    </div>`;
+                } else {
+                    resultDiv.innerHTML = `<div style="color: #ff6b6b; margin-top: 10px;">
+                        ❌ ${data.message}
+                    </div>`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
