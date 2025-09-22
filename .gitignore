@@ -1,0 +1,18 @@
+# Ignore generated pcap files
+*.pcap
+*.pcapng
+*.cap
+
+# Ignore temporary files
+/tmp/
+*.tmp
+*.log
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore system files
+.DS_Store
+Thumbs.db
